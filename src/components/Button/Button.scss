@@ -1,0 +1,48 @@
+
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-radius: 62px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary{
+  background-color: #000;
+  color: white;
+}
+
+.btn-secondary{
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.btn-white{
+  background-color: white;
+  color: black;
+}
+
+.btn-large{
+  height: 56px;
+}
+
+.btn-medium {
+  height: 48px;
+}
+
+.btn-small {
+  height: 42px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.p-none {
+  padding: auto 12px;
+}
+
