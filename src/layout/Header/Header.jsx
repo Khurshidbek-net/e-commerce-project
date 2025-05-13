@@ -4,11 +4,13 @@ import { MdClear } from 'react-icons/md';
 import { BiCart, BiSearch } from 'react-icons/bi';
 import { CgProfile } from 'react-icons/cg';
 import { FiMenu } from 'react-icons/fi';
+import { Link, Navigate, useNavigate } from 'react-router';
 
 function Header() {
   const [isFragmentVisible, setIsFragmentVisible] = useState(true);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
+  const navigate = useNavigate();
   const handleClearClick = () => {
     setIsFragmentVisible(false);
   };
@@ -17,12 +19,16 @@ function Header() {
     setIsBurgerOpen(!isBurgerOpen);
   };
 
+  const handleCartClick = () => {
+    navigate('/cart');
+  }
+
   return (
     <header>
       {isFragmentVisible && (
         <div className='header-top'>
           <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
-          <MdClear className='clear-btn' onClick={handleClearClick}/>
+          <MdClear className='clear-btn' onClick={handleClearClick} />
         </div>
       )}
       <div className='container'>
@@ -31,7 +37,7 @@ function Header() {
             <FiMenu />
           </div>
 
-          <h3>SHOP.CO</h3>
+          <Link to={"/"} className='logo'>SHOP.CO</Link>
 
           <div className={`content-ul ${isBurgerOpen ? 'open' : ''}`}>
             <ul>
@@ -43,13 +49,13 @@ function Header() {
 
           <div className='search-input desktop-search'>
             <BiSearch />
-            <input type="text" placeholder='Search for products...'/>
+            <input type="text" placeholder='Search for products...' />
           </div>
 
           <div className='card-and-profile-icons'>
             <BiSearch className='mobile-search-icon' />
-            <BiCart />
-            <CgProfile />
+            <BiCart onClick={handleCartClick} className='cart-icon' />
+            <CgProfile className='profile-icon' />
           </div>
         </div>
       </div>

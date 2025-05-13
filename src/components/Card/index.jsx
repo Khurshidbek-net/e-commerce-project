@@ -12,16 +12,12 @@ import { getRating } from '../../utils/getRating'
 
 
 const Card = ({ product }) => {
-  console.log(product)
+
   const { images, title, price, rating, id } = product;
 
   return (
     <div>
       <img src={images[0]} alt={title} className='product-image' />
-      <div>
-        <FaRegHeart />
-        <MdAddShoppingCart />
-      </div>
       <div className='product-card'>
         <div className='product-info'>
           <Link key={id} to={`/productDetail/${id}`}>

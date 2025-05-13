@@ -1,4 +1,3 @@
-import React from 'react'
 import { TfiEmail } from 'react-icons/tfi'
 import './Footer.scss'
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs'

@@ -1,0 +1,39 @@
+.review-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  // width: 100%;
+  // max-width: 610px;
+  background-color: white;
+  font-family: sans-serif;
+
+  .review-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    .verified-icon {
+      font-size: 18px;
+    }
+  }
+
+  .review-text {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .review-date {
+    color: #999;
+    font-size: 13px;
+  }
+}
