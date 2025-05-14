@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { mockReviews } from '../../../../components/Reviews/reviews';
 import ReviewCard from '../../../../components/Reviews';
+import { Link } from 'react-router';
 
 
 function ByDress() {
@@ -16,12 +17,12 @@ function ByDress() {
         <h3>BROWSE BY DRESS STYLE</h3>
         <div className='img-wrapper'>
           <div className='img-row'>
-            <img style={{width: "408px", height: "289px"}} src="/src/assets/bd1_item.png" alt="bd1" />
-            <img style={{width: "684px", height: "289px"}} src="/src/assets/bd2_item.png" alt="bd2" />
+            <Link to="/category/Casual"><img style={{ width: "408px", height: "289px" }} src="/src/assets/bd1_item.png" alt="bd1" /></Link>
+            <Link to="/category/Formal"><img style={{ width: "684px", height: "289px" }} src="/src/assets/bd2_item.png" alt="bd2" /></Link>
           </div>
           <div className='img-row'>
-            <img style={{width: "684px", height: "289px"}} src="/src/assets/bd3_item.png" alt="bd3" />
-            <img style={{width: "408px", height: "289px"}} src="/src/assets/bd4_item.png" alt="bd4" />
+            <Link to="/category/Party"><img style={{ width: "684px", height: "289px" }} src="/src/assets/bd3_item.png" alt="bd3" /></Link>
+            <Link to="/category/Gym"><img style={{ width: "408px", height: "289px" }} src="/src/assets/bd4_item.png" alt="bd4" /></Link>
           </div>
         </div>
       </div>

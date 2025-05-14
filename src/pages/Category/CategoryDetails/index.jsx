@@ -7,15 +7,15 @@ import 'react-range-slider-input/dist/style.css';
 import './Category.scss'
 import FilterSidebar from './FilterSidebar';
 import { BreadCrumb } from '../../../components';
+import { useParams } from 'react-router-dom';
 
 const CategoryDetails = () => {
-  
 
+  const { name } = useParams();
   return (
-
     <div className='container'>
-      <BreadCrumb/>
-      <FilterSidebar/>
+      <BreadCrumb />
+      <FilterSidebar name={name} />
     </div>
   )
 }
